@@ -1,13 +1,13 @@
 $(document).ready(function() {
 
     document.getElementById('superBoton').addEventListener('click', () => {
-        let heroeNumero = document.getElementById('heroeNumero').value;
-
+        //let heroeNumero = document.getElementById('heroeNumero').value;
+        // por que no necesita prevent default??
         $.ajax({
             type: "get",
             //contentType: "application/json; charset=utf-8",
             dataType: "Json",
-            url: `https://www.superheroapi.com/api.php/10159283131357910/${heroeNumero}`,
+            url: `https://www.superheroapi.com/api.php/10159283131357910/34`,  // https://www.superheroapi.com/api.php/10159283131357910/${heroeNumero}
             //data: "data",
             success: function(datos) {
                 
