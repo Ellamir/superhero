@@ -7,22 +7,30 @@ $(function () {
         //$('ul').html(``);
         var id = $("#pokeId").val();
         console.log(id);
-        $.get(`https://pokeapi.co/api/v2/pokemon/${id}`, function (pokemon) {
+        $.get(`https://www.superheroapi.com/api.php/10220294272246745/${id}`, function (pokemon) {
             console.log(pokemon);
-            var pokeName = pokemon.species.name;
-            var pokeSprite = pokemon.sprites.front_default;
+            var pokeName = pokemon.name;
+            var realName = pokemon.biography.json(["full-name"]);
+            var pokeSprite = pokemon.image.url;
             console.log(pokeName);
+            console.log(realName);
         document.getElementById("nombrePokemon").innerHTML = `Pokemon N° ${pokemon.id} | ${pokeName}`;
         document.getElementById("spritePokemon").src = pokeSprite;
         
        
+        intelligence": "75",
+        "strength": "60",
+        "speed": "65",
+        "durability": "90",
+        "power": "96",
+        "combat": "
 
-        var hp = pokemon.stats[5].base_stat;
-        var atk = pokemon.stats[4].base_stat;
-        var def = pokemon.stats[3].base_stat;
-        var sat = pokemon.stats[2].base_stat;
-        var sdf = pokemon.stats[1].base_stat;
-        var spd = pokemon.stats[0].base_stat;
+        var hp = pokemon.powerstats.intelligence;
+        var atk = pokemon.powerstats.strength;
+        var def = pokemon.powerstats.speed;
+        var sat = pokemon.powerstats.durability;
+        var sdf = pokemon.powerstats.power;
+        var spd = pokemon.powerstats.combat;
         console.log(hp);
         document.getElementById("statsPokemon").innerHTML = `
         <strong>HP</strong> = ${hp} <br>
