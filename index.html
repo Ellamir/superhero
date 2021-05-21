@@ -1,0 +1,60 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+
+    <link href="https://fonts.googleapis.com/css?family=Raleway:300,400&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+    <meta name="author" content="TFW">
+    <meta name="description" content="">
+    <!-- <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"> -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Encuentra tu superhéroe</title>
+</head>
+
+<body>
+    <div class="pokedex">
+        <img alt="Pokedex" class="imgtitle" src="titulo.png">
+        <form>
+            <input type="text" id="pokeId" placeholder="pikachu">
+            <input type="submit" id="pokeBtn"></form>
+        <br><label for="pokeId">Busca por número</label>
+
+        </form>
+
+        <table class="pokeInfo">
+            <th colspan="2">
+                <h2 class="pokeName" id="nombrePokemon"></h2>
+                </th>
+                <tr>
+                    <td>
+
+
+                        <img class="pokeSprite" id="spritePokemon" src="favicon.png"></p>
+                    </td>
+                    <td class="statsPokemon">
+                        <p id="statsPokemon"></p>
+                    </td>
+                </tr>
+        </table>
+        <div class="chart-container"></div>
+        <canvas id="chart" width="50px" height="50px"></canvas>
+
+    </div>
+
+
+    </div>
+    <!-- Jquery V.3.3.1 -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <!-- Popper JS V.1.14.3 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="main.js"></script>
+    <!-- Graficos de https://www.chartjs.org/ -->
+</body>
+
+</html>
